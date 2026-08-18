@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&family=Geist:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap");
+
+:root {
+  --primary: #141414;
+  --secondary: #5a5955;
+  --highlight: #c55a38;
+  --highlight-hover: #ac4d30;
+  --border-color: #e4e3de;
+  --background-color: #faf9f5;
+  --list-label: #95948f;
+  --icon-background: #ffffff;
+  --shadow-color: #111233;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background-color);
+  font-family: "Geist", sans-serif;
+  color: var(--secondary);
+  min-height: 100vh;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+}
+
+.title {
+  font-family: "Outfit", sans-serif;
+}
+
+.highlighted-text {
+  font-family: "Geist Mono", monospace;
+  color: var(--highlight);
+}
+
+.content {
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 80px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 1;
+}
+
+.logo::before {
+  content: "";
+  display: inline-block;
+  margin-right: 10px;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  background-color: var(--highlight);
+  flex-shrink: 0;
+}
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--secondary);
+  font-size: 14px;
+  transition: color 0.15s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary);
+}
+
+.nav-links a.active {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.action-btn {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 16px;
+  background-color: var(--highlight);
+  color: var(--background-color);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0.7px 1px var(--shadow-color);
+  transition: background-color 0.15s ease;
+}
+
+.action-btn:active {
+  box-shadow: none;
+}
+
+.action-btn:hover {
+  background-color: var(--highlight-hover);
+}
