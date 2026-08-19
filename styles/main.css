@@ -67,7 +67,8 @@ select {
 .footer {
   justify-content: space-between;
   align-items: center;
-  padding: 32px 80px;
+  padding-inline: clamp(2.5rem, 1.786rem + 3.571vw, 5rem);
+  padding-block: clamp(1rem, 0.714rem + 1.429vw, 2rem);
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
 }
