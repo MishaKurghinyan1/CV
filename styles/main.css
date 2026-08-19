@@ -74,19 +74,23 @@ select {
 }
 
 .hamburger-component {
-  padding: 24px;
   display: flex;
-  align-items: flex-start;
   flex-direction: column;
   justify-content: space-between;
+  align-items: flex-start;
   position: fixed;
-  background-color: var(--icon-background);
   top: 0;
-  right: -50%;
-  width: 50%;
+  right: -100%;
+  width: min(85%, 360px);
   height: 100vh;
+  height: 100dvh;
+  background-color: var(--icon-background);
   z-index: 999;
-  transition: right 0.1s ease;
+  transition: right 0.1s ease-in-out;
+  padding-top: max(24px, env(safe-area-inset-top));
+  padding-inline: 24px;
+  padding-bottom: max(24px, env(safe-area-inset-bottom));
+  overflow-y: auto;
 }
 
 .hamburger-component.active {
