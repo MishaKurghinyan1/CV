@@ -1,0 +1,121 @@
+#home {
+  align-items: center;
+  gap: 80px;
+  padding: 80px;
+}
+
+.information {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.information-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.information-main_profession {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.information-main_role {
+  font-size: 64px;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.information-main_description {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.information-contacts {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.information-contact {
+  display: flex;
+  gap: 12px;
+}
+
+.information-contact_icon {
+  width: 36px;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  aspect-ratio: 1/1;
+  background-color: var(--icon-background);
+  transition: background-color 0.1s ease;
+}
+
+.information-contact_icon:hover {
+  background-color: #fafafa;
+}
+
+.information-contact_text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.information-contact_text-title {
+  color: var(--list-label);
+  font-size: 11px;
+  font-weight: normal;
+}
+
+.information-contact_text-description {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.information-nav {
+  display: flex;
+  gap: 16px;
+  width: fit-content;
+}
+
+.information-nav_link {
+  padding: 14px 24px;
+}
+
+.about-link,
+.portfolio-link {
+  padding: 14px 24px;
+  font-size: 14px;
+}
+
+.about-link {
+  color: var(--primary);
+  border: 1px solid var(--border-color);
+}
+
+.portfolio-link {
+  color: var(--background-color);
+  background-color: var(--primary);
+}
+
+.profile-picture {
+  width: 480px;
+  height: 600px;
+  padding: 12px;
+  border-radius: 28px;
+  background-color: var(--icon-background);
+  border: 1px solid var(--border-color);
+}
+
+.profile-picture > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}

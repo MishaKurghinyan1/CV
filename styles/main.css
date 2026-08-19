@@ -33,7 +33,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
-
+a {
+  text-decoration: none;
+}
 input,
 button,
 textarea,
@@ -43,6 +45,7 @@ select {
 
 .title {
   font-family: "Outfit", sans-serif;
+  color: var(--primary);
 }
 
 .highlighted-text {
@@ -51,15 +54,24 @@ select {
 }
 
 .content {
+  display: flex;
   width: 100%;
+  height: fit-content;
 }
 
-.header {
-  display: flex;
+.main {
+  flex: 1;
+}
+
+.header,
+.footer {
   justify-content: space-between;
   align-items: center;
   padding: 32px 80px;
+  border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
+}
+.footer {
 }
 
 .logo {
@@ -90,10 +102,9 @@ select {
 }
 
 .nav-links a {
-  text-decoration: none;
   color: var(--secondary);
   font-size: 14px;
-  transition: color 0.15s ease;
+  transition: all 0.1s ease;
 }
 
 .nav-links a:hover {
@@ -105,23 +116,71 @@ select {
   font-weight: 600;
 }
 
-.action-btn {
-  font-size: 13px;
+.footer-left,
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 4px;
+}
+
+.footer- .action-btn {
   font-weight: 600;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 1px 1px var(--shadow-color);
+  transition: all 0.1s ease;
+}
+
+.download {
+  font-size: 13px;
   padding: 10px 16px;
+  border: none;
   background-color: var(--highlight);
   color: var(--background-color);
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 0.7px 1px var(--shadow-color);
-  transition: background-color 0.15s ease;
 }
 
 .action-btn:active {
   box-shadow: none;
 }
 
-.action-btn:hover {
+.download:hover {
   background-color: var(--highlight-hover);
+}
+
+.icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.hamburger {
+  display: none;
+}
+
+.main {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.page-section {
+  display: none;
+  width: 100%;
+  max-width: 1440px;
+}
+
+.page-section.active {
+  display: flex;
 }
