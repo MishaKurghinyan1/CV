@@ -187,14 +187,14 @@ select {
   transition: all 0.1s ease;
 }
 
-.download {
+.download,
+.download-mobile {
   font-size: 13px;
   padding: 10px 16px;
   border: none;
   background-color: var(--highlight);
   color: var(--background-color);
 }
-
 .action-btn:active {
   box-shadow: none;
 }
