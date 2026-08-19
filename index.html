@@ -8,12 +8,16 @@
     <link rel="stylesheet" href="styles/about.css" />
     <link rel="stylesheet" href="styles/portfolio.css" />
     <script src="scripts/main.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
     <title>Misha Kurghinyan | CV</title>
   </head>
   <body>
     <header class="header content">
       <a href="index.html">
-        <h1 class="title logo">MISHA KURGHINYAN</h1>
+        <h1>
+          <span class="mobile-text title logo">Misha K.</span>
+          <span class="desktop-text title logo">Misha Kurghinyan</span>
+        </h1>
       </a>
 
       <nav aria-label="Main Navigation">
@@ -25,14 +29,37 @@
       </nav>
 
       <button class="action-btn download">Download CV</button>
-      <button class="icon-button hamburger" aria-label="Toggle menu">
+      <button
+        id="hamburger"
+        class="icon-button hamburger"
+        aria-label="Toggle menu"
+      >
         <img
           src="assets/icons/hamburger.svg"
-          alt="Download"
+          alt="Expand Navigation Menu"
           aria-hidden="true"
           class="hamburger-icon"
         />
       </button>
+      <div class="hamburger-component">
+        <nav aria-label="Main Navigation">
+          <ul class="hamburger_nav-links">
+            <li><a href="#home" class="active" data-link>Overview</a></li>
+            <li><a href="#about" data-link>About & Experience</a></li>
+            <li><a href="#portfolio" data-link>Portfolio</a></li>
+          </ul>
+          <button id="close" class="icon-button close" aria-label="Toggle menu">
+            <img
+              src="assets/icons/close.svg"
+              alt="Close Navigation Menu"
+              aria-hidden="true"
+              class="close-icon"
+            />
+          </button>
+        </nav>
+
+        <button class="action-btn download">Download CV</button>
+      </div>
     </header>
 
     <main class="main content">
@@ -220,10 +247,11 @@
     <footer class="footer content">
       <div class="footer-left">
         <div class="footer-brand">
-          <a href="index.html" class="title logo">MISHA KURGHINYAN</a>
-          <p class="footer-tagline">
-            Software Engineer & Design System Specialist
-          </p>
+          <a href="index.html">
+            <span class="mobile-text title logo">Misha K.</span>
+            <span class="desktop-text title logo">Misha Kurghinyan</span></a
+          >
+          <p class="footer-tagline">Software Engineer</p>
         </div>
 
         <nav class="footer-nav" aria-label="Footer Navigation">
