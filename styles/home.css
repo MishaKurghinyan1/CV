@@ -1,7 +1,6 @@
 #home {
   align-items: center;
   gap: clamp(2.5rem, 1.786rem + 3.571vw, 5rem);
-  padding: clamp(2.5rem, 1.786rem + 3.571vw, 5rem);
 }
 
 .information {
@@ -28,7 +27,6 @@
 .information-main_role {
   font-size: clamp(1.75rem, 1.107rem + 3.214vw, 4rem);
   line-height: 1.1;
-  font-weight: 800;
 }
 
 .information-main_description {
@@ -86,9 +84,15 @@
 }
 
 .information-nav_link {
-  text-align: center;
+  border-radius: 8px;
+  font-weight: 600;
   padding-block: 0.75rem;
   padding-inline: 1.5rem;
+  box-shadow: 0 1px 1px var(--shadow-color);
+}
+
+.information-nav_link:active {
+  box-shadow: none;
 }
 
 .about-link,
@@ -108,14 +112,13 @@
 
 .profile-picture {
   width: 480px;
-  aspect-ratio: 4 / 5;
   padding: 12px;
   border-radius: 28px;
 }
 
 .profile-picture img {
+  aspect-ratio: 4 / 5;
   width: 100%;
-  height: 100%;
   object-fit: cover;
   border-radius: 16px;
 }

@@ -77,6 +77,7 @@ progress::-moz-progress-bar {
 }
 
 .picture-container {
+  display: flex;
   background-color: var(--icon-background);
   border: 1px solid var(--border-color);
 }
@@ -90,6 +91,14 @@ select {
 
 .title {
   font-family: "Outfit", sans-serif;
+  color: var(--primary);
+  font-weight: 800;
+}
+
+.sub-title {
+  font-family: "Geist Mono", monospace;
+  font-weight: normal;
+  font-size: clamp(0.75rem, 0.7143rem + 0.1786vw, 0.875rem);
   color: var(--primary);
 }
 
@@ -219,6 +228,10 @@ select {
   gap: 12px;
 }
 
+.footer-right {
+  align-items: flex-end;
+}
+
 .footer-brand {
   display: flex;
   flex-direction: column;
@@ -231,27 +244,29 @@ select {
 }
 
 .action-btn {
-  font-weight: 600;
   cursor: pointer;
-  border-radius: 8px;
-  box-shadow: 0 1px 1px var(--shadow-color);
+  text-align: center;
   transition: all 0.1s ease;
 }
 
 .download,
 .download-mobile {
+  box-shadow: 0 1px 1px var(--shadow-color);
   font-size: 13px;
+  border-radius: 8px;
   padding: 10px 16px;
   border: none;
   background-color: var(--highlight);
   color: var(--background-color);
 }
-.action-btn:active {
-  box-shadow: none;
-}
 
 .download:hover {
   background-color: var(--highlight-hover);
+}
+
+.download:active,
+.download-mobile:active {
+  box-shadow: none;
 }
 
 .icon-button {
@@ -276,6 +291,7 @@ select {
   display: none;
   width: 100%;
   max-width: 1440px;
+  padding: clamp(1.5rem, 0.5rem + 5vw, 5rem);
 }
 
 .page-section.active {

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="styles/main.css" />
     <script src="scripts/hamburger.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/portfolio-category.js" defer></script>
     <title>Misha Kurghinyan | CV</title>
   </head>
   <body>
@@ -239,14 +240,10 @@
           <img src="assets/images/profile.webp" alt="Misha Kurghinyan" />
         </article>
       </section>
-      <!--  -->
-      <!--  -->
-      <!--  -->
-      <!--  -->
       <section id="about" class="page-section">
         <article class="about-left-block">
           <div class="about-bio-block">
-            <h2 class="highlighted-text about-title">THE STORY</h2>
+            <h2 class="highlighted-text sub-title">THE STORY</h2>
             <h3 class="title bio-title">
               Where backend architecture meets frontend design.
             </h3>
@@ -261,7 +258,7 @@
           <hr />
 
           <div class="about-skills-block">
-            <h2 class="about-title">LANGUAGES</h2>
+            <h2 class="sub-title">LANGUAGES</h2>
             <div class="about-skills">
               <div class="about-skill-row">
                 <label class="title about-progress-label" for="arm"
@@ -287,7 +284,7 @@
           <hr />
 
           <div class="about-skills-block">
-            <h2 class="about-title">SKILLS</h2>
+            <h2 class="sub-title">SKILLS</h2>
             <div class="about-skills">
               <div class="about-skill-row">
                 <label class="title about-progress-label" for="html"
@@ -379,7 +376,7 @@
 
         <article class="about-right-block">
           <div class="about-education-block">
-            <h2 class="about-title">EDUCATION TIMELINE</h2>
+            <h2 class="sub-title">EDUCATION TIMELINE</h2>
             <div class="about-education_row">
               <h2
                 class="highlighted-text about-education-period"
@@ -436,8 +433,11 @@
               </p>
             </div>
           </div>
+
+          <hr />
+
           <div class="about-hobbies_block">
-            <h2 class="about-title">HOBBIES</h2>
+            <h2 class="sub-title">HOBBIES</h2>
             <div class="about-hobbies_list">
               <div class="hobby">
                 <img src="assets/icons/read.svg" alt="Read" aria-label="Read" />
@@ -496,7 +496,200 @@
       <!--  -->
       <!--  -->
       <!--  -->
-      <section id="portfolio" class="page-section"><h2>Portfolio</h2></section>
+      <section id="portfolio" class="page-section">
+        <article class="portfolio-intro">
+          <h2 class="highlighted-text sub-title">SELECTED ARCHIVE</h2>
+          <h3 class="title portfolio-title">Selected Platforms & Projects</h3>
+        </article>
+        <article class="portfolio-category-bar">
+          <button
+            class="action-btn category active"
+            role="tab"
+            aria-selected="false"
+            aria-controls="category-results"
+            id="tab-all"
+            data-category-name="all"
+          >
+            <span class="desktop">All Projects</span>
+            <span class="mobile">All</span>
+          </button>
+          <button
+            class="action-btn category"
+            role="tab"
+            aria-selected="false"
+            aria-controls="category-results"
+            id="tab-programming"
+            data-category-name="programming"
+          >
+            <span class="desktop">Programming</span>
+            <span class="mobile">Prog.</span>
+          </button>
+          <button
+            class="action-btn category"
+            role="tab"
+            aria-selected="false"
+            aria-controls="category-results"
+            id="tab-photoshop"
+            data-category-name="photoshop"
+          >
+            <span class="desktop">Photoshop</span>
+            <span class="mobile">Ps</span>
+          </button>
+        </article>
+        <article class="portfolio-content">
+          <div id="programming" class="programming portfolio-section active">
+            <div class="picture-container portfolio-picture-container">
+              <img
+                src="assets/images/chat.webp"
+                alt="Chat Picture"
+                class="portfolio-picture"
+              />
+              <div class="info-block">
+                <div class="title-container">
+                  <h2 class="highlighted-text portfolio-info">Programming</h2>
+                  <a
+                    href="https://client-production-b9fd.up.railway.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="assets/icons/arrow-up-right.svg"
+                      alt="arrow-up-right"
+                    />
+                  </a>
+                </div>
+                <h3 class="title portfolio-title">Fullstack Chat Web App</h3>
+                <p class="portfolio-description">
+                  An app where you can join chats, create, edit and delete your
+                  chats, register your user and have a conversation in real-time
+                  chats
+                </p>
+              </div>
+            </div>
+            <div class="picture-container portfolio-picture-container">
+              <img
+                src="assets/images/pics-app.webp"
+                alt="Web App Picture"
+                class="portfolio-picture"
+              />
+              <div class="info-block">
+                <div class="title-container">
+                  <h2 class="highlighted-text portfolio-info">Programming</h2>
+                  <a
+                    href="https://www.youtube.com/watch?v=ddu4nZ08lgo&t=1s"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="assets/icons/arrow-up-right.svg"
+                      alt="arrow-up-right"
+                    />
+                  </a>
+                </div>
+                <h3 class="title portfolio-title">Fullstack Gallery Web App</h3>
+                <p class="portfolio-description">
+                  Created in NextJS, web application where you can register,
+                  post, like and delete your images, which will be saved in the
+                  cloud.
+                </p>
+              </div>
+            </div>
+          </div>
+          <hr class="category-hr active" />
+          <div id="photoshop" class="photoshop portfolio-section active">
+            <img
+              loading="lazy"
+              class="portfolio-photo"
+              src="assets/images/photoshop/coca-cola.webp"
+              alt="Breaking Bad"
+            />
+            <img
+              loading="lazy"
+              class="portfolio-photo"
+              src="assets/images/photoshop/brba-enjoyers.webp"
+              alt="Breaking Bad"
+            />
+            <img
+              loading="lazy"
+              class="portfolio-photo"
+              src="assets/images/photoshop/dead-king.webp"
+              alt="Breaking Bad"
+            />
+            <img
+              loading="lazy"
+              class="portfolio-photo"
+              src="assets/images/photoshop/double-exp1.webp"
+              alt="Breaking Bad"
+            />
+            <img
+              loading="lazy"
+              class="portfolio-photo"
+              src="assets/images/photoshop/double-exp2.webp"
+              alt="Breaking Bad"
+            />
+            <img
+              loading="lazy"
+              class="portfolio-photo"
+              src="assets/images/photoshop/field.webp"
+              alt="Breaking Bad"
+            />
+            <img
+              loading="lazy"
+              class="portfolio-photo"
+              src="assets/images/photoshop/knight.webp"
+              alt="Breaking Bad"
+            />
+            <img
+              loading="lazy"
+              class="portfolio-photo"
+              src="assets/images/photoshop/last-of-us.webp"
+              alt="Breaking Bad"
+            />
+            <img
+              loading="lazy"
+              class="portfolio-photo"
+              src="assets/images/photoshop/magic-tree.webp"
+              alt="Breaking Bad"
+            />
+            <img
+              loading="lazy"
+              class="portfolio-photo"
+              src="assets/images/photoshop/man-in-cave.webp"
+              alt="Breaking Bad"
+            />
+            <img
+              loading="lazy"
+              class="portfolio-photo"
+              src="assets/images/photoshop/pair-on-beach.webp"
+              alt="Breaking Bad"
+            />
+            <img
+              loading="lazy"
+              class="portfolio-photo"
+              src="assets/images/photoshop/robot.webp"
+              alt="Breaking Bad"
+            />
+            <img
+              loading="lazy"
+              class="portfolio-photo"
+              src="assets/images/photoshop/war.webp"
+              alt="Breaking Bad"
+            />
+            <img
+              loading="lazy"
+              class="portfolio-photo"
+              src="assets/images/photoshop/village.webp"
+              alt="Breaking Bad"
+            />
+            <img
+              loading="lazy"
+              class="portfolio-photo"
+              src="assets/images/photoshop/soldiers.webp"
+              alt="Breaking Bad"
+            />
+          </div>
+        </article>
+      </section>
     </main>
 
     <footer class="footer content">

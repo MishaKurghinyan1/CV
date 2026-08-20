@@ -1,18 +1,9 @@
 #about {
   gap: clamp(2rem, 1.1429rem + 4.2857vw, 5rem);
-  padding: clamp(1.5rem, 0.5rem + 5vw, 5rem);
-}
-
-.about-title {
-  font-family: "Geist Mono", monospace;
-  font-weight: normal;
-  font-size: clamp(0.75rem, 0.7143rem + 0.1786vw, 0.875rem);
-  color: var(--primary);
 }
 
 .bio-title {
   font-size: clamp(1rem, 0.5714rem + 2.1429vw, 2.5rem);
-  font-weight: 800;
 }
 
 .bio-description {
