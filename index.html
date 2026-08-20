@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/main.css" />
     <link rel="stylesheet" href="styles/home.css" />
     <link rel="stylesheet" href="styles/about.css" />
     <link rel="stylesheet" href="styles/portfolio.css" />
-    <script src="scripts/main.js" defer></script>
+    <link rel="stylesheet" href="styles/main.css" />
+    <script src="scripts/hamburger.js" defer></script>
     <script src="scripts/navigation.js" defer></script>
     <title>Misha Kurghinyan | CV</title>
   </head>
@@ -235,11 +235,267 @@
           </div>
         </article>
 
-        <article class="profile-picture">
+        <article class="picture-container profile-picture">
           <img src="assets/images/profile.webp" alt="Misha Kurghinyan" />
         </article>
       </section>
-      <section id="about" class="page-section"><h2>About</h2></section>
+      <!--  -->
+      <!--  -->
+      <!--  -->
+      <!--  -->
+      <section id="about" class="page-section">
+        <article class="about-left-block">
+          <div class="about-bio-block">
+            <h2 class="highlighted-text about-title">THE STORY</h2>
+            <h3 class="title bio-title">
+              Where backend architecture meets frontend design.
+            </h3>
+            <p class="bio-description">
+              I believe great interfaces are engineered, not just styled. My
+              background spans both backend systems and frontend architecture,
+              giving me a distinct perspective on component scalability, state
+              management, and visual precision.
+            </p>
+          </div>
+
+          <hr />
+
+          <div class="about-skills-block">
+            <h2 class="about-title">LANGUAGES</h2>
+            <div class="about-skills">
+              <div class="about-skill-row">
+                <label class="title about-progress-label" for="arm"
+                  >Armenian</label
+                >
+                <progress id="arm" max="100" value="100">Native</progress>
+              </div>
+              <div class="about-skill-row">
+                <label class="title about-progress-label" for="rus"
+                  >Russian</label
+                >
+                <progress id="rus" max="100" value="80">C1</progress>
+              </div>
+              <div class="about-skill-row">
+                <label class="title about-progress-label" for="en"
+                  >English</label
+                >
+                <progress id="en" max="100" value="56">B1+</progress>
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <div class="about-skills-block">
+            <h2 class="about-title">SKILLS</h2>
+            <div class="about-skills">
+              <div class="about-skill-row">
+                <label class="title about-progress-label" for="html"
+                  >HTML</label
+                >
+                <progress id="html" max="100" value="50">60%</progress>
+              </div>
+              <div class="about-skill-row">
+                <label class="title about-progress-label" for="css">CSS</label>
+                <progress id="css" max="100" value="50">60%</progress>
+              </div>
+              <div class="about-skill-row">
+                <label class="title about-progress-label desktop" for="JS"
+                  >JavaScript</label
+                >
+                <label class="title about-progress-label mobile" for="JS"
+                  >JS</label
+                >
+                <progress id="arm" max="100" value="50">60%</progress>
+              </div>
+              <div class="about-skill-row">
+                <label class="title about-progress-label" for="tjs"
+                  >ReactJS</label
+                >
+                <progress id="rjs" max="100" value="35">55%</progress>
+              </div>
+              <div class="about-skill-row">
+                <label class="title about-progress-label" for="nxtjs"
+                  >NextJS</label
+                >
+                <progress id="nxtjs" max="100" value="30">30%</progress>
+              </div>
+              <div class="about-skill-row">
+                <label class="title about-progress-label" for="vite"
+                  >Vite</label
+                >
+                <progress id="vite" max="100" value="20">25%</progress>
+              </div>
+              <div class="about-skill-row">
+                <label class="title about-progress-label" for="ndjs"
+                  >NodeJS</label
+                >
+                <progress id="ndjs" max="100" value="50">30%</progress>
+              </div>
+              <div class="about-skill-row">
+                <label class="title about-progress-label" for="xprsjs"
+                  >ExpressJS</label
+                >
+                <progress id="xprsjs" max="100" value="35">35%</progress>
+              </div>
+              <div class="about-skill-row">
+                <label class="title about-progress-label" for="nstjs"
+                  >NestJS</label
+                >
+                <progress id="nstjs" max="100" value="30">30%</progress>
+              </div>
+              <div class="about-skill-row">
+                <label class="title about-progress-label" for="msql"
+                  >MySQL</label
+                >
+                <progress id="msql" max="100" value="30">30%</progress>
+              </div>
+              <div class="about-skill-row">
+                <label class="title about-progress-label desktop" for="JS"
+                  >PortgreSQL</label
+                >
+                <label class="title about-progress-label mobile" for="JS"
+                  >PSQL</label
+                >
+                <progress id="arm" max="100" value="30">30%</progress>
+              </div>
+              <div class="about-skill-row">
+                <label class="title about-progress-label" for="JS"
+                  >MongoDB</label
+                >
+                <progress id="arm" max="100" value="20">20%</progress>
+              </div>
+              <div class="about-skill-row">
+                <label class="title about-progress-label" for="JS"
+                  >Docker</label
+                >
+                <progress id="arm" max="100" value="15">15%</progress>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <hr class="mobile-hr" />
+
+        <article class="about-right-block">
+          <div class="about-education-block">
+            <h2 class="about-title">EDUCATION TIMELINE</h2>
+            <div class="about-education_row">
+              <h2
+                class="highlighted-text about-education-period"
+                style="grid-area: period"
+              >
+                2021 - 2024
+              </h2>
+              <h4 class="title profession-name" style="grid-area: profession">
+                Gyumri Craftsman State School No. 4
+              </h4>
+              <h3 class="school-name" style="grid-area: school">
+                Student - Computer Operator
+              </h3>
+              <p class="education-description" style="grid-area: description">
+                Completed a 3-year practical program focused on PC hardware
+                assembly, component installation, and setting up wired/wireless
+                network connections. Developed operational proficiency across
+                core desktop software, including Microsoft Office (Word, Excel,
+                PowerPoint), Adobe Photoshop, and CorelDRAW for graphic asset
+                creation.
+              </p>
+            </div>
+            <div class="about-education_row">
+              <h2
+                class="highlighted-text about-education-period"
+                style="grid-area: period"
+              >
+                2012 - 2021
+              </h2>
+              <h4 class="title profession-name" style="grid-area: profession">
+                Gyumri Secondary School No. 23
+              </h4>
+              <h3 class="school-name" style="grid-area: school">Student</h3>
+              <p class="education-description" style="grid-area: description">
+                Completed standard secondary education covering core academic
+                disciplines, including mathematics, sciences, literature, and
+                social studies.
+              </p>
+            </div>
+            <div class="about-education_row">
+              <h2
+                class="highlighted-text about-education-period"
+                style="grid-area: period"
+              >
+                2011 - 2012
+              </h2>
+              <h4 class="title profession-name" style="grid-area: profession">
+                Gyumri Primary School No. 21
+              </h4>
+              <h3 class="school-name" style="grid-area: school">Student</h3>
+              <p class="education-description" style="grid-area: description">
+                Attended Grade 1; completed foundational early-childhood
+                literacy and basic math modules.
+              </p>
+            </div>
+          </div>
+          <div class="about-hobbies_block">
+            <h2 class="about-title">HOBBIES</h2>
+            <div class="about-hobbies_list">
+              <div class="hobby">
+                <img src="assets/icons/read.svg" alt="Read" aria-label="Read" />
+                <span class="title about-hobby">Reading</span>
+              </div>
+              <div class="hobby">
+                <img
+                  src="assets/icons/study.svg"
+                  alt="Lear"
+                  aria-label="Learn"
+                />
+                <span class="title about-hobby">Learning</span>
+              </div>
+              <div class="hobby">
+                <img
+                  src="assets/icons/piano.svg"
+                  alt="Piano"
+                  aria-label="Piano"
+                />
+                <span class="title about-hobby">Piano</span>
+              </div>
+              <div class="hobby">
+                <img
+                  src="assets/icons/guitar.svg"
+                  alt="Guitar"
+                  aria-label="Guitar"
+                />
+                <span class="title about-hobby">Guitar</span>
+              </div>
+              <div class="hobby">
+                <img
+                  src="assets/icons/run.svg"
+                  alt="Walking"
+                  aria-label="Walking"
+                />
+                <span class="title about-hobby">Walking</span>
+              </div>
+              <div class="hobby">
+                <img
+                  src="assets/icons/run.svg"
+                  alt="Running"
+                  aria-label="Running"
+                />
+                <span class="title about-hobby">Running</span>
+              </div>
+              <div class="hobby" style="border: none">
+                <img src="assets/icons/gym.svg" alt="GYM" aria-label="GYM" />
+                <span class="title about-hobby">GYM</span>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+      <!--  -->
+      <!--  -->
+      <!--  -->
+      <!--  -->
+      <!--  -->
       <section id="portfolio" class="page-section"><h2>Portfolio</h2></section>
     </main>
 

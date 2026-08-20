@@ -1,0 +1,175 @@
+#about {
+  gap: clamp(2rem, 1.1429rem + 4.2857vw, 5rem);
+  padding: clamp(1.5rem, 0.5rem + 5vw, 5rem);
+}
+
+.about-title {
+  font-family: "Geist Mono", monospace;
+  font-weight: normal;
+  font-size: clamp(0.75rem, 0.7143rem + 0.1786vw, 0.875rem);
+  color: var(--primary);
+}
+
+.bio-title {
+  font-size: clamp(1rem, 0.5714rem + 2.1429vw, 2.5rem);
+  font-weight: 800;
+}
+
+.bio-description {
+  line-height: 1.6;
+  font-size: clamp(0.6rem, 0.4857rem + 0.5714vw, 1rem);
+}
+
+.about-progress-label {
+  font-weight: 500;
+  font-size: clamp(0.4375rem, 0.2375rem + 1vw, 0.875rem);
+}
+
+.about-education-period {
+  font-weight: 500;
+  font-size: clamp(0.5rem, 0.2857rem + 1.0714vw, 0.8125rem);
+}
+
+.profession-name {
+  font-size: clamp(0.75rem, 0.5357rem + 1.0714vw, 1.125rem);
+  font-weight: 600;
+}
+
+.school-name {
+  color: var(--secondary);
+  font-size: clamp(0.625rem, 0.4464rem + 0.8929vw, 1rem);
+  font-weight: 500;
+}
+
+.education-description {
+  font-size: clamp(0.4375rem, 0.3125rem + 0.625vw, 0.875rem);
+  line-height: 1.5;
+}
+
+.about-hobby {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.about-left-block {
+  max-width: 480px;
+}
+
+.about-right-block {
+  flex: 1;
+}
+
+.about-left-block,
+.about-right-block {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 1.6429rem + 1.4286vw, 3rem);
+}
+
+.about-bio-block {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.75rem, 0.6786rem + 0.3571vw, 1rem);
+}
+
+.about-skills,
+.about-skills-block {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.about-skills-block {
+  gap: clamp(1rem, 0.8571rem + 0.7143vw, 1.5rem);
+}
+
+.about-skills {
+  gap: clamp(0.75rem, 0.6786rem + 0.3571vw, 1rem);
+}
+
+.about-skill-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-education-block,
+.about-hobbies_block {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-education-block {
+  gap: clamp(1.5rem, 1.3571rem + 0.7143vw, 2rem);
+}
+
+.about-hobbies_block {
+  gap: clamp(0.75rem, 0.5357rem + 1.0714vw, 1.5rem);
+}
+
+.about-education_row {
+  display: grid;
+  grid-template-areas:
+    "period profession"
+    "period school"
+    "period description";
+  grid-template-columns: max-content 1fr;
+  gap: 8px 64px;
+}
+
+.about-hobbies_list {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.hobby {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-right: 6px;
+  border-right: 1px solid var(--highlight);
+}
+
+.mobile-hr {
+  width: 100%;
+  display: none;
+}
+
+@media (max-width: 1130px) {
+  #about {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-left-block,
+  .about-right-block {
+    width: 100%;
+  }
+
+  .about-left-block {
+    max-width: clamp(60%, -85.8065% + 129.0323vw, 100%);
+  }
+
+  .about-skills {
+    padding-inline: clamp(0rem, -0.7901rem + 3.9506vw, 2rem);
+  }
+
+  .mobile-hr {
+    display: block;
+  }
+}
+
+@media (max-width: 860px) {
+  .about-education_row {
+    display: grid;
+    grid-template-areas:
+      "profession period "
+      "school school"
+      "description description";
+    grid-template-columns: 1fr max-content;
+    gap: 8px 64px;
+  }
+}
