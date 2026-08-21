@@ -47,6 +47,9 @@
 }
 
 .information-contact_icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 36px;
   border: 1px solid var(--border-color);
   border-radius: 8px;

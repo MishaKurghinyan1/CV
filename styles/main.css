@@ -107,6 +107,11 @@ select {
   color: var(--highlight);
 }
 
+.footer-tagline,
+.footer-copyright {
+  font-size: clamp(0.75rem, 0.6786rem + 0.3571vw, 1rem);
+}
+
 .content {
   display: flex;
   width: 100%;
@@ -125,6 +130,10 @@ select {
   padding-block: clamp(1rem, 0.714rem + 1.429vw, 2rem);
   border-top: 1px solid var(--border-color);
   border-bottom: 1px solid var(--border-color);
+}
+
+.footer {
+  flex-wrap: wrap;
 }
 
 .hamburger-component {
@@ -324,9 +333,9 @@ select {
   }
 
   .footer {
-    flex-direction: column;
     gap: 12px;
-    justify-content: flex-start;
+  }
+  .footer-right {
     align-items: flex-start;
   }
 }
