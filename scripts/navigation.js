@@ -1,6 +1,10 @@
 "use strict";
 
 function navigateTo(targetId) {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
   const sections = document.querySelectorAll(".page-section");
   sections.forEach((section) => {
     const isTarget = section.id === targetId;
