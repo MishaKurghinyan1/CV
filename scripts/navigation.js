@@ -33,6 +33,11 @@ document.addEventListener("click", (event) => {
   if (link) {
     event.preventDefault();
     const id = link.getAttribute("href").replace("#", "");
+    const hamburgerMenu = document.querySelector(".hamburger-component");
+    if (hamburgerMenu) {
+      hamburgerMenu.classList.remove("active");
+      document.body.style.overflow = "";
+    }
     navigateTo(id);
   }
 });
