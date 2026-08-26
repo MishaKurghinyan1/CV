@@ -68,7 +68,7 @@ progress::-webkit-progress-bar {
 progress::-webkit-progress-value {
   background-color: var(--highlight);
   border-radius: 9999px;
-  transition: width 0.1s ease;
+  transition: width 0.3s ease;
 }
 
 progress::-moz-progress-bar {
@@ -137,7 +137,7 @@ select {
 }
 
 .hamburger-component {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
@@ -149,7 +149,9 @@ select {
   height: 100dvh;
   background-color: var(--icon-background);
   z-index: 999;
-  transition: right 0.1s ease-in-out;
+  transition:
+    right 0.3s ease,
+    display 0.3s ease allow-discrete;
   padding-top: max(24px, env(safe-area-inset-top));
   padding-inline: 24px;
   padding-bottom: max(24px, env(safe-area-inset-bottom));
@@ -216,11 +218,13 @@ select {
 .hamburger_nav-links a {
   color: var(--secondary);
   font-size: 14px;
-  transition: all 0.1s ease;
+  transition: all 0.3s ease;
 }
 
 .nav-links a:hover,
-.hamburger_nav-links a:hover {
+.hamburger_nav-links a:hover,
+.nav-links a:focus-visible,
+.hamburger_nav-links a:focus-visible {
   color: var(--primary);
 }
 
@@ -255,7 +259,7 @@ select {
 .action-btn {
   cursor: pointer;
   text-align: center;
-  transition: all 0.1s ease;
+  transition: all 0.3s ease;
 }
 
 .download,
@@ -269,7 +273,8 @@ select {
   color: var(--background-color);
 }
 
-.download:hover {
+.download:hover,
+.download:focus-visible {
   background-color: var(--highlight-hover);
 }
 
@@ -326,6 +331,9 @@ select {
   .hamburger {
     display: block;
     cursor: pointer;
+  }
+  .hamburger-component {
+    display: flex;
   }
 
   .close {

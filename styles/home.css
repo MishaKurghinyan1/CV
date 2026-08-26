@@ -55,10 +55,11 @@
   border-radius: 8px;
   aspect-ratio: 1/1;
   background-color: var(--icon-background);
-  transition: background-color 0.1s ease;
+  transition: background-color 0.3s ease;
 }
 
-.information-contact_icon:hover {
+.information-contact_icon:hover,
+.information-contact_icon:focus-visible {
   background-color: #fafafa;
 }
 

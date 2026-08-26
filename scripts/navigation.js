@@ -1,15 +1,17 @@
 "use strict";
 
+const mobileMedia = window.matchMedia("(max-width: 860px)");
+
 function navigateTo(targetId) {
   window.scrollTo({
     top: 0,
     behavior: "smooth",
   });
+
   const sections = document.querySelectorAll(".page-section");
   sections.forEach((section) => {
     const isTarget = section.id === targetId;
     section.classList.toggle("active", isTarget);
-    section.setAttribute("aria-hidden", String(!isTarget));
   });
 
   const navLinks = document.querySelectorAll("[data-link]");
@@ -50,6 +52,32 @@ function handleRoute() {
   const id = location.hash.replace("#", "") || "home";
   navigateTo(id);
 }
+
+document.addEventListener("keydown", (e) => {
+  const currentNav = e.target.closest("[data-link]");
+  if (!currentNav) return;
+
+  const container = currentNav.closest("nav") || currentNav.parentElement;
+  console.log(container);
+  const links = Array.from(container.querySelectorAll("[data-link]"));
+  const index = links.indexOf(currentNav);
+  const isMobile = mobileMedia.matches;
+
+  if (index === -1) return;
+
+  let targetIndex = index;
+
+  if (e.key === (isMobile ? "ArrowDown" : "ArrowRight")) {
+    targetIndex = (index + 1) % links.length;
+  } else if (e.key === (isMobile ? "ArrowUp" : "ArrowLeft")) {
+    targetIndex = (index - 1 + links.length) % links.length;
+  } else {
+    return;
+  }
+
+  e.preventDefault();
+  links[targetIndex].focus();
+});
 
 window.addEventListener("popstate", handleRoute);
 window.addEventListener("DOMContentLoaded", handleRoute);

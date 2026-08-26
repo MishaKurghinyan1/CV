@@ -32,8 +32,10 @@
       <a
         href="assets/cv/misha-kurghinyan-cv.pdf"
         download="misha-kurghinyan-cv.pdf"
-        ><button class="action-btn download">Download CV</button></a
+        class="action-btn download"
       >
+        Download CV
+      </a>
       <button
         id="hamburger"
         class="icon-button hamburger"
@@ -65,8 +67,10 @@
         <a
           href="assets/cv/misha-kurghinyan-cv.pdf"
           download="misha-kurghinyan-cv.pdf"
-          ><button class="action-btn download-mobile">Download CV</button></a
+          class="action-btn download-mobile"
         >
+          Download CV
+        </a>
       </div>
     </header>
 
@@ -244,12 +248,9 @@
           </div>
         </article>
 
-        <article class="picture-container profile-picture">
-          <img
-            src="assets/images/profile.webp"
-            alt="Misha Kurghinyan Profile Picture"
-          />
-        </article>
+        <div class="picture-container profile-picture">
+          <img src="assets/images/profile.webp" alt="Misha Kurghinyan" />
+        </div>
       </section>
       <section id="about" class="page-section">
         <article class="about-left-block">
@@ -275,19 +276,19 @@
                 <label class="title about-progress-label" for="arm"
                   >Armenian</label
                 >
-                <progress id="arm" max="100" value="100">100</progress>
+                <progress id="arm" max="100" value="100">100%</progress>
               </div>
               <div class="about-skill-row">
                 <label class="title about-progress-label" for="rus"
                   >Russian</label
                 >
-                <progress id="rus" max="100" value="80">80</progress>
+                <progress id="rus" max="100" value="80">80%</progress>
               </div>
               <div class="about-skill-row">
                 <label class="title about-progress-label" for="en"
                   >English</label
                 >
-                <progress id="en" max="100" value="56">56</progress>
+                <progress id="en" max="100" value="56">56%</progress>
               </div>
             </div>
           </div>
@@ -483,16 +484,17 @@
         </article>
       </section>
       <section id="portfolio" class="page-section">
-        <article class="portfolio-intro">
+        <div class="portfolio-intro">
           <h2 class="highlighted-text sub-title">SELECTED ARCHIVE</h2>
           <h3 class="title portfolio-title">Selected Projects</h3>
-        </article>
-        <article class="portfolio-category-bar">
+        </div>
+        <div class="portfolio-category-bar" role="tablist">
           <button
             class="action-btn category active"
             role="tab"
+            tabindex="0"
             aria-selected="true"
-            aria-controls="category-results"
+            aria-controls="all-portfolio"
             id="tab-all"
             data-category-name="all"
           >
@@ -502,32 +504,33 @@
           <button
             class="action-btn category"
             role="tab"
+            tabindex="-1"
             aria-selected="false"
-            aria-controls="category-results"
+            aria-controls="programming"
             id="tab-programming"
             data-category-name="programming"
           >
-            <span class="desktop">Programming</span>
-            <span class="mobile">Prog.</span>
+            <span>Programming</span>
           </button>
           <button
             class="action-btn category"
             role="tab"
+            tabindex="-1"
             aria-selected="false"
-            aria-controls="category-results"
+            aria-controls="photoshop"
             id="tab-photoshop"
             data-category-name="photoshop"
           >
             <span class="desktop">Photoshop</span>
             <span class="mobile">Ps</span>
           </button>
-        </article>
-        <article class="portfolio-content">
+        </div>
+        <div id="all-portfolio" class="portfolio-content">
           <div id="programming" class="programming portfolio-section active">
             <div class="picture-container portfolio-picture-container">
               <img
                 src="assets/images/chat.webp"
-                alt="Chat Picture"
+                alt="Fullstack Chat Application Interface"
                 class="portfolio-picture"
               />
               <div class="info-block">
@@ -537,10 +540,12 @@
                     href="https://client-production-b9fd.up.railway.app/"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Visit Fullstack Chat Web App (opens in new tab)"
                   >
                     <img
                       src="assets/icons/arrow-up-right.svg"
-                      alt="arrow-up-right"
+                      alt=""
+                      aria-hidden="true"
                     />
                   </a>
                 </div>
@@ -565,10 +570,12 @@
                     href="https://www.youtube.com/watch?v=ddu4nZ08lgo&t=1s"
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Watch the video of how the Web Application works."
                   >
                     <img
                       src="assets/icons/arrow-up-right.svg"
-                      alt="arrow-up-right"
+                      alt=""
+                      aria-hidden="true"
                     />
                   </a>
                 </div>
@@ -674,7 +681,7 @@
               alt="Soldier inside a military helicopter preparing to jump out"
             />
           </div>
-        </article>
+        </div>
       </section>
     </main>
 

@@ -17,13 +17,11 @@ function closeMenu() {
   document.body.style.overflow = "";
 }
 
-hamburger.addEventListener("click", (e) => {
-  e.preventDefault();
+hamburger.addEventListener("click", () => {
   openMenu();
 });
 
-closeBtn.addEventListener("click", (e) => {
-  e.preventDefault();
+closeBtn.addEventListener("click", () => {
   closeMenu();
 });
 
