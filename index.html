@@ -39,28 +39,38 @@
       <button
         id="hamburger"
         class="icon-button hamburger"
-        aria-label="Toggle menu"
+        aria-label="Toggle navigation menu"
+        aria-expanded="false"
+        aria-controls="hamburger-component"
       >
         <img
           src="assets/icons/hamburger.svg"
-          alt="Expand Navigation Menu"
-          aria-hidden="true"
+          alt=""
           class="hamburger-icon"
+          width="24"
+          height="24"
         />
       </button>
-      <div class="hamburger-component">
+      <div id="hamburger-component" class="hamburger-component">
         <nav aria-label="Main Navigation">
           <ul class="hamburger_nav-links">
             <li><a href="#home" class="active" data-link>Overview</a></li>
             <li><a href="#about" data-link>About & Experience</a></li>
             <li><a href="#portfolio" data-link>Portfolio</a></li>
           </ul>
-          <button id="close" class="icon-button close" aria-label="Toggle menu">
+          <button
+            id="close"
+            class="icon-button close"
+            aria-expanded="true"
+            aria-label="Close Navigation Menu"
+            aria-controls="hamburger-component"
+          >
             <img
               src="assets/icons/close.svg"
-              alt="Close Navigation Menu"
-              aria-hidden="true"
+              alt=""
               class="close-icon"
+              width="24"
+              height="24"
             />
           </button>
         </nav>
@@ -101,7 +111,6 @@
                 <img
                   src="assets/icons/email.svg"
                   alt=""
-                  aria-hidden="true"
                   width="16"
                   height="16"
                 />
@@ -126,7 +135,6 @@
                 <img
                   src="assets/icons/phone.svg"
                   alt=""
-                  aria-hidden="true"
                   width="16"
                   height="16"
                 />
@@ -153,7 +161,6 @@
                 <img
                   src="assets/icons/location.svg"
                   alt=""
-                  aria-hidden="true"
                   width="16"
                   height="16"
                 />
@@ -182,7 +189,6 @@
                 <img
                   src="assets/icons/linkedin.svg"
                   alt=""
-                  aria-hidden="true"
                   width="16"
                   height="16"
                 />
@@ -211,7 +217,6 @@
                 <img
                   src="assets/icons/instagram.svg"
                   alt=""
-                  aria-hidden="true"
                   width="16"
                   height="16"
                 />
@@ -249,7 +254,12 @@
         </article>
 
         <div class="picture-container profile-picture">
-          <img src="assets/images/profile.webp" alt="Misha Kurghinyan" />
+          <img
+            src="assets/images/profile.webp"
+            alt="Misha Kurghinyan"
+            width="456"
+            height="576"
+          />
         </div>
       </section>
       <section id="about" class="page-section">
@@ -276,19 +286,40 @@
                 <label class="title about-progress-label" for="arm"
                   >Armenian</label
                 >
-                <progress id="arm" max="100" value="100">100%</progress>
+                <progress
+                  id="arm"
+                  max="100"
+                  value="100"
+                  aria-valuetext="Native Speaker"
+                >
+                  Native
+                </progress>
               </div>
               <div class="about-skill-row">
                 <label class="title about-progress-label" for="rus"
                   >Russian</label
                 >
-                <progress id="rus" max="100" value="80">80%</progress>
+                <progress
+                  id="rus"
+                  max="100"
+                  value="80"
+                  aria-valuetext="C1 Advanced"
+                >
+                  C1
+                </progress>
               </div>
               <div class="about-skill-row">
                 <label class="title about-progress-label" for="en"
                   >English</label
                 >
-                <progress id="en" max="100" value="56">56%</progress>
+                <progress
+                  id="en"
+                  max="100"
+                  value="56"
+                  aria-valuetext="B1+ Upper Intermediate"
+                >
+                  B1+
+                </progress>
               </div>
             </div>
           </div>
@@ -452,31 +483,51 @@
             <h2 class="sub-title">HOBBIES</h2>
             <div class="about-hobbies_list">
               <div class="hobby">
-                <img src="assets/icons/read.svg" alt="" />
+                <img
+                  src="assets/icons/read.svg"
+                  width="24"
+                  height="24"
+                  alt=""
+                />
                 <span class="about-hobby">Reading</span>
               </div>
               <div class="hobby">
-                <img src="assets/icons/study.svg" alt="" />
+                <img
+                  src="assets/icons/study.svg"
+                  width="24"
+                  height="24"
+                  alt=""
+                />
                 <span class="about-hobby">Learning</span>
               </div>
               <div class="hobby">
-                <img src="assets/icons/piano.svg" alt="" />
+                <img
+                  src="assets/icons/piano.svg"
+                  width="24"
+                  height="24"
+                  alt=""
+                />
                 <span class="about-hobby">Piano</span>
               </div>
               <div class="hobby">
-                <img src="assets/icons/guitar.svg" alt="" />
+                <img
+                  src="assets/icons/guitar.svg"
+                  width="24"
+                  height="24"
+                  alt=""
+                />
                 <span class="about-hobby">Guitar</span>
               </div>
               <div class="hobby">
-                <img src="assets/icons/run.svg" alt="" />
+                <img src="assets/icons/run.svg" width="24" height="24" alt="" />
                 <span class="about-hobby">Walking</span>
               </div>
               <div class="hobby">
-                <img src="assets/icons/run.svg" alt="" />
+                <img src="assets/icons/run.svg" width="24" height="24" alt="" />
                 <span class="about-hobby">Running</span>
               </div>
               <div class="hobby" style="border: none">
-                <img src="assets/icons/gym.svg" alt="" />
+                <img src="assets/icons/gym.svg" width="24" height="24" alt="" />
                 <span class="about-hobby">GYM</span>
               </div>
             </div>
@@ -532,6 +583,8 @@
                 src="assets/images/chat.webp"
                 alt="Fullstack Chat Application Interface"
                 class="portfolio-picture"
+                width="600"
+                height="375"
               />
               <div class="info-block">
                 <div class="title-container">
@@ -544,8 +597,9 @@
                   >
                     <img
                       src="assets/icons/arrow-up-right.svg"
+                      width="10"
+                      height="10"
                       alt=""
-                      aria-hidden="true"
                     />
                   </a>
                 </div>
@@ -562,6 +616,8 @@
                 src="assets/images/pics-app.webp"
                 alt="Web App Picture"
                 class="portfolio-picture"
+                width="600"
+                height="375"
               />
               <div class="info-block">
                 <div class="title-container">
@@ -574,8 +630,9 @@
                   >
                     <img
                       src="assets/icons/arrow-up-right.svg"
+                      width="10"
+                      height="10"
                       alt=""
-                      aria-hidden="true"
                     />
                   </a>
                 </div>
@@ -595,90 +652,135 @@
               class="portfolio-photo"
               src="assets/images/photoshop/coca-cola.webp"
               alt="A rabbit looking at the passing by Coca Cola delivery truck"
+              decoding="async"
+              width="310"
+              height="175"
             />
             <img
               loading="lazy"
               class="portfolio-photo"
               src="assets/images/photoshop/brba-enjoyers.webp"
               alt="Two people sitting together watching Breaking Bad on TV"
+              decoding="async"
+              width="310"
+              height="175"
             />
             <img
               loading="lazy"
               class="portfolio-photo"
               src="assets/images/photoshop/dead-king.webp"
               alt="Human skeleton wearing a crown sitting on a throne"
+              decoding="async"
+              width="310"
+              height="210"
             />
             <img
               loading="lazy"
               class="portfolio-photo"
               src="assets/images/photoshop/double-exp1.webp"
               alt="Double exposure composition of a woman's portrait blended with snowy mouuntains"
+              decoding="async"
+              width="310"
+              height="310"
             />
             <img
               loading="lazy"
               class="portfolio-photo"
               src="assets/images/photoshop/double-exp2.webp"
               alt="Double exposure composition of a woman's side profile blended with city lights"
+              decoding="async"
+              width="310"
+              height="425"
             />
             <img
               loading="lazy"
               class="portfolio-photo"
               src="assets/images/photoshop/field.webp"
               alt="Scenic landscape depicting animals in a field"
+              decoding="async"
+              width="310"
+              height="175"
             />
             <img
               loading="lazy"
               class="portfolio-photo"
               src="assets/images/photoshop/knight.webp"
               alt="Armored knight standing under full moonlight"
+              decoding="async"
+              width="310"
+              height="480"
             />
             <img
               loading="lazy"
               class="portfolio-photo"
               src="assets/images/photoshop/last-of-us.webp"
               alt="Young girl looking down at a crashed commercial airplane in a post-apocalyptic setting"
+              decoding="async"
+              width="310"
+              height="175"
             />
             <img
               loading="lazy"
               class="portfolio-photo"
               src="assets/images/photoshop/magic-tree.webp"
               alt="Mythical dragon flying near a glowing, floating tree"
+              decoding="async"
+              width="310"
+              height="550"
             />
             <img
               loading="lazy"
               class="portfolio-photo"
               src="assets/images/photoshop/man-in-cave.webp"
               alt="Explorer and his dog discovering glowing treasure inside a dark cave"
+              decoding="async"
+              width="310"
+              height="165"
             />
             <img
               loading="lazy"
               class="portfolio-photo"
               src="assets/images/photoshop/pair-on-beach.webp"
               alt="Couple sitting inside a wooden boat on a beach looking at each other"
+              decoding="async"
+              width="310"
+              height="175"
             />
             <img
               loading="lazy"
               class="portfolio-photo"
               src="assets/images/photoshop/robot.webp"
               alt="Metallic robot reaching out to touch a glowing butterfly"
+              decoding="async"
+              width="310"
+              height="180"
             />
             <img
               loading="lazy"
               class="portfolio-photo"
               src="assets/images/photoshop/war.webp"
               alt="Warrior on horseback shouting with raised sword in battle"
+              decoding="async"
+              width="310"
+              height="130"
             />
             <img
               loading="lazy"
               class="portfolio-photo"
               src="assets/images/photoshop/village.webp"
               alt="Man resting near a cottage looking at a picturous countryside landscape"
+              decoding="async"
+              width="310"
+              height="245"
             />
             <img
               loading="lazy"
               class="portfolio-photo"
               src="assets/images/photoshop/soldiers.webp"
               alt="Soldier inside a military helicopter preparing to jump out"
+              decoding="async"
+              width="310"
+              height="195"
             />
           </div>
         </div>
@@ -703,63 +805,66 @@
           <a
             href="mailto:minecon291@gmail.com"
             class="icon-button footer-social_icon"
-            aria-label="Send Email"
+            aria-label="Email minecon291@gmail.com"
           >
             <img
               src="assets/icons/email.svg"
               alt=""
-              aria-hidden="true"
               width="18"
               height="18"
+              loading="lazy"
             />
           </a>
+
           <a
             href="tel:+37493612018"
             class="icon-button footer-social_icon"
-            aria-label="Call Phone Number"
+            aria-label="Call Misha Kurghinyan"
           >
             <img
               src="assets/icons/phone.svg"
               alt=""
-              aria-hidden="true"
               width="18"
               height="18"
+              loading="lazy"
             />
           </a>
+
           <a
-            href="https://www.linkedin.com/in/misha-kurghinyan-579920340/"
+            href="https://www.linkedin.com/in/misha-kurghinyan-579920340"
             target="_blank"
             rel="noopener noreferrer"
             class="icon-button footer-social_icon"
-            aria-label="LinkedIn Profile"
+            aria-label="LinkedIn profile of Misha Kurghinyan (opens in new tab)"
           >
             <img
               src="assets/icons/linkedin.svg"
               alt=""
-              aria-hidden="true"
               width="18"
               height="18"
+              loading="lazy"
             />
           </a>
+
           <a
-            href="https://www.instagram.com/misha_k____/"
+            href="https://www.instagram.com/misha_k____"
             target="_blank"
             rel="noopener noreferrer"
             class="icon-button footer-social_icon"
-            aria-label="Instagram Profile"
+            aria-label="Instagram profile of Misha Kurghinyan (opens in new tab)"
           >
             <img
               src="assets/icons/instagram.svg"
               alt=""
-              aria-hidden="true"
               width="18"
               height="18"
+              loading="lazy"
             />
           </a>
         </div>
         <p class="footer-copyright">
-          &copy; <span id="current-year">2026</span> Misha Kurghinyan. All
-          rights reserved.
+          &copy; <time datetime="2026" id="current-year">2026</time> Misha
+          Kurghinyan. All rights reserved.
         </p>
       </div>
     </footer>

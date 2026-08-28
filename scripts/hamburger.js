@@ -8,12 +8,14 @@ const desktopQuery = window.matchMedia("(min-width: 860px)");
 function openMenu() {
   hamburgerMenu.classList.add("active");
   hamburger.setAttribute("aria-expanded", "true");
+  closeBtn.setAttribute("aria-expanded", "true");
   document.body.style.overflow = "hidden";
 }
 
 function closeMenu() {
   hamburgerMenu.classList.remove("active");
   hamburger.setAttribute("aria-expanded", "false");
+  closeBtn.setAttribute("aria-expanded", "false");
   document.body.style.overflow = "";
 }
 

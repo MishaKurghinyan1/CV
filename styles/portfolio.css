@@ -63,6 +63,7 @@
 
 .portfolio-picture {
   width: 100%;
+  height: auto;
   aspect-ratio: 16/10;
   object-fit: cover;
   border: 1px solid var(--border-color);
@@ -108,7 +109,10 @@
   display: block;
   margin-bottom: 12px;
   border-radius: 12px;
+  break-inside: avoid;
+  max-width: 100%;
   width: 100%;
+  height: auto;
 }
 
 .category-hr {
