@@ -88,11 +88,11 @@
       <section id="home" class="page-section active">
         <article class="information">
           <div class="information-main">
-            <h2 class="highlighted-text information-main_profession">
+            <span class="highlighted-text information-main_profession">
               SOFTWARE ENGINEER
-            </h2>
+            </span>
             <h3 class="title information-main_role">
-              Code that scales. Interfaces that click.
+              Code that scales, Interfaces that click.
             </h3>
             <p class="information-main_description">
               Hi, I'm Misha. I build high-performance web applications, scalable
@@ -253,19 +253,19 @@
           </div>
         </article>
 
-        <div class="picture-container profile-picture">
+        <figure class="picture-container profile-picture">
           <img
             src="assets/images/profile.webp"
             alt="Misha Kurghinyan"
             width="456"
             height="576"
           />
-        </div>
+        </figure>
       </section>
       <section id="about" class="page-section">
         <article class="about-left-block">
           <div class="about-bio-block">
-            <h2 class="highlighted-text sub-title">THE STORY</h2>
+            <span class="highlighted-text sub-title">THE STORY</span>
             <h3 class="title bio-title">
               Where backend architecture meets frontend design.
             </h3>
@@ -280,7 +280,7 @@
           <hr />
 
           <div class="about-skills-block">
-            <h2 class="sub-title">LANGUAGES</h2>
+            <span class="sub-title">LANGUAGES</span>
             <div class="about-skills">
               <div class="about-skill-row">
                 <label class="title about-progress-label" for="arm"
@@ -327,7 +327,7 @@
           <hr />
 
           <div class="about-skills-block">
-            <h2 class="sub-title">SKILLS</h2>
+            <span class="sub-title">SKILLS</span>
             <div class="about-skills">
               <div class="about-skill-row">
                 <label class="title about-progress-label" for="html"
@@ -419,20 +419,20 @@
 
         <article class="about-right-block">
           <div class="about-education-block">
-            <h2 class="sub-title">EDUCATION TIMELINE</h2>
+            <span class="sub-title">EDUCATION TIMELINE</span>
             <div class="about-education_row">
-              <h2
+              <span
                 class="highlighted-text about-education-period"
                 style="grid-area: period"
               >
                 2021 - 2024
-              </h2>
-              <h4 class="title profession-name" style="grid-area: profession">
+              </span>
+              <h3 class="title profession-name" style="grid-area: profession">
                 Gyumri Craftsman State School No. 4
-              </h4>
-              <h3 class="school-name" style="grid-area: school">
-                Student - Computer Operator
               </h3>
+              <h4 class="school-name" style="grid-area: school">
+                Student - Computer Operator
+              </h4>
               <p class="education-description" style="grid-area: description">
                 Completed a 3-year practical program focused on PC hardware
                 assembly, component installation, and setting up wired/wireless
@@ -443,16 +443,16 @@
               </p>
             </div>
             <div class="about-education_row">
-              <h2
+              <span
                 class="highlighted-text about-education-period"
                 style="grid-area: period"
               >
                 2012 - 2021
-              </h2>
-              <h4 class="title profession-name" style="grid-area: profession">
+              </span>
+              <h3 class="title profession-name" style="grid-area: profession">
                 Gyumri Secondary School No. 23
-              </h4>
-              <h3 class="school-name" style="grid-area: school">Student</h3>
+              </h3>
+              <h4 class="school-name" style="grid-area: school">Student</h4>
               <p class="education-description" style="grid-area: description">
                 Completed standard secondary education covering core academic
                 disciplines, including mathematics, sciences, literature, and
@@ -460,16 +460,16 @@
               </p>
             </div>
             <div class="about-education_row">
-              <h2
+              <span
                 class="highlighted-text about-education-period"
                 style="grid-area: period"
               >
                 2011 - 2012
-              </h2>
-              <h4 class="title profession-name" style="grid-area: profession">
+              </span>
+              <h3 class="title profession-name" style="grid-area: profession">
                 Gyumri Primary School No. 21
-              </h4>
-              <h3 class="school-name" style="grid-area: school">Student</h3>
+              </h3>
+              <h4 class="school-name" style="grid-area: school">Student</h4>
               <p class="education-description" style="grid-area: description">
                 Attended Grade 1; completed foundational early-childhood
                 literacy and basic math modules.
@@ -480,7 +480,7 @@
           <hr />
 
           <div class="about-hobbies_block">
-            <h2 class="sub-title">HOBBIES</h2>
+            <span class="sub-title">HOBBIES</span>
             <div class="about-hobbies_list">
               <div class="hobby">
                 <img
@@ -536,7 +536,7 @@
       </section>
       <section id="portfolio" class="page-section">
         <div class="portfolio-intro">
-          <h2 class="highlighted-text sub-title">SELECTED ARCHIVE</h2>
+          <span class="highlighted-text sub-title">SELECTED ARCHIVE</span>
           <h3 class="title portfolio-title">Selected Projects</h3>
         </div>
         <div class="portfolio-category-bar" role="tablist">
@@ -578,7 +578,7 @@
         </div>
         <div id="all-portfolio" class="portfolio-content">
           <div id="programming" class="programming portfolio-section active">
-            <div class="picture-container portfolio-picture-container">
+            <article class="picture-container portfolio-picture-container">
               <img
                 src="assets/images/chat.webp"
                 alt="Fullstack Chat Application Interface"
@@ -588,7 +588,9 @@
               />
               <div class="info-block">
                 <div class="title-container">
-                  <h2 class="highlighted-text portfolio-info">Programming</h2>
+                  <span class="highlighted-text portfolio-info"
+                    >Programming</span
+                  >
                   <a
                     href="https://client-production-b9fd.up.railway.app/"
                     target="_blank"
@@ -610,8 +612,8 @@
                   chats
                 </p>
               </div>
-            </div>
-            <div class="picture-container portfolio-picture-container">
+            </article>
+            <article class="picture-container portfolio-picture-container">
               <img
                 src="assets/images/pics-app.webp"
                 alt="Web App Picture"
@@ -621,7 +623,9 @@
               />
               <div class="info-block">
                 <div class="title-container">
-                  <h2 class="highlighted-text portfolio-info">Programming</h2>
+                  <span class="highlighted-text portfolio-info"
+                    >Programming</span
+                  >
                   <a
                     href="https://www.youtube.com/watch?v=ddu4nZ08lgo&t=1s"
                     target="_blank"
@@ -643,7 +647,7 @@
                   cloud.
                 </p>
               </div>
-            </div>
+            </article>
           </div>
           <hr class="category-hr active" />
           <div id="photoshop" class="photoshop portfolio-section active">
