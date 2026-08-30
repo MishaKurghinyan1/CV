@@ -284,7 +284,9 @@ select {
 }
 
 .download:hover,
-.download:focus-visible {
+.download:focus-visible,
+.download-mobile:hover,
+.download-mobile:focus-visible {
   background-color: var(--highlight-hover);
 }
 
