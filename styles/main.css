@@ -159,7 +159,14 @@ select {
 }
 
 .hamburger-component.active {
+  display: flex;
   right: 0;
+  opacity: 1;
+
+  @starting-style {
+    right: -100%;
+    opacity: 0;
+  }
 }
 
 .hamburger-component nav {
@@ -331,9 +338,6 @@ select {
   .hamburger {
     display: block;
     cursor: pointer;
-  }
-  .hamburger-component {
-    display: flex;
   }
 
   .close {

@@ -6,6 +6,7 @@ const closeBtn = document.getElementById("close");
 const desktopQuery = window.matchMedia("(min-width: 860px)");
 
 function openMenu() {
+  hamburger.setAttribute("tabindex", "-1");
   hamburgerMenu.classList.add("active");
   hamburger.setAttribute("aria-expanded", "true");
   closeBtn.setAttribute("aria-expanded", "true");
@@ -13,6 +14,7 @@ function openMenu() {
 }
 
 function closeMenu() {
+  hamburger.removeAttribute("tabindex");
   hamburgerMenu.classList.remove("active");
   hamburger.setAttribute("aria-expanded", "false");
   closeBtn.setAttribute("aria-expanded", "false");
