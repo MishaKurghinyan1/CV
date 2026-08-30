@@ -4,7 +4,7 @@
   --primary: #141414;
   --secondary: #5a5955;
   --highlight: #c55a38;
-  --highlight-hover: #ac4d30;
+  --highlight-hover: #9c462b;
   --border-color: #e4e3de;
   --background-color: #faf9f5;
   --list-label: #95948f;
@@ -223,6 +223,7 @@ select {
 
 .nav-links a,
 .hamburger_nav-links a {
+  outline: none;
   color: var(--secondary);
   font-size: 14px;
   transition: all 0.3s ease;
@@ -233,6 +234,7 @@ select {
 .nav-links a:focus-visible,
 .hamburger_nav-links a:focus-visible {
   color: var(--primary);
+  font-weight: 500;
 }
 
 .nav-links a.active,
@@ -278,6 +280,7 @@ select {
   border: none;
   background-color: var(--highlight);
   color: var(--background-color);
+  outline: none;
 }
 
 .download:hover,
