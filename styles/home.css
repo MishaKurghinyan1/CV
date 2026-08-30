@@ -60,7 +60,7 @@
 
 .information-contact_icon:hover,
 .information-contact_icon:focus-visible {
-  background-color: #fafafa;
+  background-color: var(--border-color);
 }
 
 .information-contact_text {
