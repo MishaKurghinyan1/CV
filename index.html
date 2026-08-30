@@ -281,7 +281,7 @@
             </p>
           </div>
 
-          <hr />
+          <hr aria-hidden="true" />
 
           <div class="about-skills-block">
             <span class="sub-title">LANGUAGES</span>
@@ -328,7 +328,7 @@
             </div>
           </div>
 
-          <hr />
+          <hr aria-hidden="true" />
 
           <div class="about-skills-block">
             <span class="sub-title">SKILLS</span>
@@ -419,7 +419,7 @@
           </div>
         </article>
 
-        <hr class="mobile-hr" />
+        <hr aria-hidden="true" class="mobile-hr" />
 
         <article class="about-right-block">
           <div class="about-education-block">
@@ -481,7 +481,7 @@
             </div>
           </div>
 
-          <hr />
+          <hr aria-hidden="true" />
 
           <div class="about-hobbies_block">
             <span class="sub-title">HOBBIES</span>
@@ -543,37 +543,28 @@
           <span class="highlighted-text sub-title">SELECTED ARCHIVE</span>
           <h3 class="title portfolio-title">Selected Projects</h3>
         </div>
-        <div class="portfolio-category-bar" role="tablist">
+        <div class="portfolio-category-bar">
           <button
-            class="action-btn category active"
-            role="tab"
-            tabindex="0"
-            aria-selected="true"
-            aria-controls="all-portfolio"
             id="tab-all"
+            aria-selected="true"
             data-category-name="all"
+            class="action-btn category active"
           >
             <span class="desktop">All Projects</span>
             <span class="mobile">All</span>
           </button>
           <button
-            class="action-btn category"
-            role="tab"
-            tabindex="-1"
-            aria-selected="false"
-            aria-controls="programming"
             id="tab-programming"
+            class="action-btn category"
+            aria-selected="false"
             data-category-name="programming"
           >
             <span>Programming</span>
           </button>
           <button
-            class="action-btn category"
-            role="tab"
-            tabindex="-1"
-            aria-selected="false"
-            aria-controls="photoshop"
             id="tab-photoshop"
+            class="action-btn category"
+            aria-selected="false"
             data-category-name="photoshop"
           >
             <span class="desktop">Photoshop</span>
@@ -581,7 +572,12 @@
           </button>
         </div>
         <div id="all-portfolio" class="portfolio-content">
-          <div id="programming" class="programming portfolio-section active">
+          <section
+            id="programming"
+            class="programming portfolio-section active"
+            tabindex="0"
+          >
+            <h2 class="visually-hidden">Programming projects</h2>
             <article class="picture-container portfolio-picture-container">
               <img
                 src="assets/images/chat.webp"
@@ -652,9 +648,14 @@
                 </p>
               </div>
             </article>
-          </div>
-          <hr class="category-hr active" />
-          <div id="photoshop" class="photoshop portfolio-section active">
+          </section>
+          <hr aria-hidden="true" class="category-hr active" />
+          <section
+            id="photoshop"
+            class="photoshop portfolio-section active"
+            tabindex="0"
+          >
+            <h2 class="visually-hidden">Photoshop compositions</h2>
             <img
               loading="lazy"
               class="portfolio-photo"
@@ -790,7 +791,7 @@
               width="310"
               height="195"
             />
-          </div>
+          </section>
         </div>
       </section>
     </main>

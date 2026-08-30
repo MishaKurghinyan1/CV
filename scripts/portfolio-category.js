@@ -2,54 +2,61 @@
 
 function filterCategory(targetCategory) {
   const hr = document.querySelector(".category-hr");
-  const items = document.querySelectorAll(".portfolio-section");
+  const items = document.querySelectorAll("section.portfolio-section");
 
   items.forEach((item) => {
     const matches =
       targetCategory === "all" || item.classList.contains(targetCategory);
-    item.classList.toggle("active", matches);
+
+    if (matches) {
+      item.classList.add("active");
+      item.removeAttribute("hidden");
+    } else {
+      item.classList.remove("active");
+      item.setAttribute("hidden", "");
+    }
   });
   hr.classList.toggle("active", targetCategory === "all");
 
-  const tabs = document.querySelectorAll('.category[role="tab"]');
-  tabs.forEach((tab) => {
-    const isActive = tab.dataset.categoryName === targetCategory;
-    tab.classList.toggle("active", isActive);
-    tab.setAttribute("aria-selected", String(isActive));
-    tab.setAttribute("tabindex", isActive ? "0" : "-1");
+  const controllers = document.querySelectorAll(".category");
+  controllers.forEach((controller) => {
+    const isActive = controller.dataset.categoryName === targetCategory;
+    controller.classList.toggle("active", isActive);
+    controller.setAttribute("aria-selected", String(isActive));
   });
 }
 
 document.addEventListener("click", (event) => {
-  const tab = event.target.closest('[role="tab"]');
-  if (!tab) return;
+  const controller = event.target.closest(".category");
+  if (!controller) return;
 
-  const category = tab.dataset.categoryName;
+  const category = controller.dataset.categoryName;
   if (category) {
     filterCategory(category);
   }
 });
 
 document.addEventListener("keydown", (event) => {
-  const currentTab = event.target.closest('[role="tab"]');
-  if (!currentTab) return;
+  const currentController = event.target.closest(".category");
+  if (!currentController) return;
 
-  const tabList = currentTab.closest('[role="tablist"]') || document;
-  const tabs = Array.from(tabList.querySelectorAll('.category[role="tab"]'));
-  const index = tabs.indexOf(currentTab);
+  const controllersList =
+    currentController.closest(".portfolio-category-bar") || document;
+  const controller = Array.from(controllersList.querySelectorAll(".category"));
+  const index = controller.indexOf(currentController);
 
   if (index === -1) return;
 
   let targetIndex = index;
 
   if (event.key === "ArrowRight") {
-    targetIndex = (index + 1) % tabs.length;
+    targetIndex = (index + 1) % controller.length;
   } else if (event.key === "ArrowLeft") {
-    targetIndex = (index - 1 + tabs.length) % tabs.length;
+    targetIndex = (index - 1 + controller.length) % controller.length;
   } else {
     return;
   }
 
   event.preventDefault();
-  tabs[targetIndex].focus();
+  controller[targetIndex].focus();
 });
