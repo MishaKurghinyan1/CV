@@ -40,7 +40,9 @@ document.addEventListener("click", (event) => {
     event.preventDefault();
     const id = link.getAttribute("href").replace("#", "");
     const hamburgerMenu = document.querySelector(".hamburger-component");
+    const hamburger = document.getElementById("hamburger");
     if (hamburgerMenu) {
+      hamburger.removeAttribute("tabindex");
       hamburgerMenu.classList.remove("active");
       document.body.style.overflow = "";
     }
@@ -58,7 +60,6 @@ document.addEventListener("keydown", (e) => {
   if (!currentNav) return;
 
   const container = currentNav.closest("nav") || currentNav.parentElement;
-  console.log(container);
   const links = Array.from(container.querySelectorAll("[data-link]"));
   const index = links.indexOf(currentNav);
   const isMobile = mobileMedia.matches;
